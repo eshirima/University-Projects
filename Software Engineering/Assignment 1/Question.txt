@@ -1,0 +1,9 @@
+The Software development company you work for wants to develop some in-house software. They come to you to develop the following:
+
+A user wants to generate charts of different types and formats. The type of charts include bar charts and pie charts. The input data will be in XML or CSV (Comma-Separated Values) formats. There are also many output formats of the charts, including SVG (Scalable Vector Graphics) and jpeg.
+
+As an example, a user may request to create a bar chart in SVG format from theirXML data.
+
+For efficiency reasons, a user may request multiple charts and multiple output formats in a single request, e.g., a request for both a bar chart and a pie chartof the same data. In this case, it would allow the input data to be loaded only once.
+
+For this assignment, proceed through the inception phase and develop a vision statement, a set of use cases, and a use case diagram.
