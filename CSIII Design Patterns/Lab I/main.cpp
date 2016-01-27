@@ -11,7 +11,7 @@
 #include <cerrno> // throws a description of the error thrown by fstream
 #include <string>
 #include <cstdlib>
-#incldue <cstring>
+#include <cstring>
 
 //TODO: Keep reading even when one file has more contents than the other.
 
