@@ -3,9 +3,10 @@ Word Count
 Lab Assignment
 
 The project is due in one week: by the midnight on the day of the next lab.
-Implement a program that reads in a text file, counts how many times each word occurs in the file and outputs the words (and counts) in the 
-decreasing order of occurrence, i.e. the counts need to be output in sorted order. Word is any sequence of alphanumeric characters. 
-Whitespace and punctuation marks are to be discarded. That is, the punctuation marks should not be counted either as a part of the word or as a separate word. You are free to make your program case sensitive (Hello and hello are counted as separate words) or case insensitive. File name is supplied on command line. You are to use
+Implement a program that reads in a text file, counts how many times each word occurs in the file and outputs the 
+words (and counts) in the decreasing order of occurrence, i.e. the counts need to be output in sorted order. Word is any sequence of alphanumeric characters. 
+Whitespace and punctuation marks are to be discarded. That is, the punctuation marks should not be counted either as a part of the word or 
+as a separate word. You are free to make your program case sensitive (Hello and hello are counted as separate words) or case insensitive. File name is supplied on command line. You are to use
 the following classes.
 
 class WordOccurrence {
@@ -34,5 +35,6 @@ private:
 
 Using vectors is not allowed. You may use standard sorting algorithms or implement insertion sort form scratch. 
 For the second class (WordList), implement a copy constructor (implementing deep copy), destructor and an overloaded assignment 
-(either classical or copy-and-swap). Make sure your class works correctly with the following code. For your constructors, use member initialization lists where possible, use default values for function parameters where appropriate. Enhance class interface if necessary.
+(either classical or copy-and-swap). Make sure your class works correctly with the following code. 
+For your constructors, use member initialization lists where possible, use default values for function parameters where appropriate. Enhance class interface if necessary.
 Hint: you can use ctype functions to check if a character is alphanumeric. Here is an example use.
