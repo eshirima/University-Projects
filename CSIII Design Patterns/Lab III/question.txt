@@ -2,8 +2,12 @@ Templated List
 
 Lab Assignment
 
-The project is due in one week: by the midnight on the day of the next lab. Make sure to include your name in comments of the source files.
-Modify the list template example as follows. Create a new templated class Collection that contains this list as a dynamically allocated member, i.e, the list contains a pointer to the first element. You are not allowed to use STL containers. The class has to implement addItem(), removeItem(), lastItem() and printCollection() methods. Method lastItem() should return the last item added to the collection.
+The project is due in one week: by the midnight on the day of the next lab. 
+Make sure to include your name in comments of the source files.
+Modify the list template example as follows. Create a new templated class Collection that contains this list as a dynamically
+allocated member, i.e, the list contains a pointer to the first element. You are not allowed to use STL containers. 
+The class has to implement addItem(), removeItem(), lastItem() and printCollection() methods. 
+Method lastItem() should return the last item added to the collection.
 
 Make sure that your templated list operates correctly with the sample code.
 
