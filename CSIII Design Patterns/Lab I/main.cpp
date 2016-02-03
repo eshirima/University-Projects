@@ -12,6 +12,7 @@
 #include <string>
 #include <cstdlib>
 #include <cstring>
+#include <tuple>
 
 //TODO: Keep reading even when one file has more contents than the other.
 
@@ -37,7 +38,7 @@ bool doesFileExist(std::string fileName)
     }
     else
     {
-        std::cerr << "Error: " << std::strerror(errno) << "\n\n"; // prints the error description
+        std::cerr << fileName << ": " << std::strerror(errno) << "\n\n"; // prints the error description
         return false;
     }
 }
@@ -58,9 +59,20 @@ void printCarotSign(std::string first, std::string second, std::string firstLog,
     std::cout << tempString << "\n";
 }
 
+// returns a tuple in ascending order
+
+std::tuple<unsigned long, unsigned long>findMax2(unsigned long first, unsigned long second)
+{
+    if (first >= second)
+    {
+        return {first, second};
+    }
+    return {second, first};
+}
+
 unsigned long findMax(unsigned long first, unsigned long second)
 {
-    if (first > second)
+    if (first >= second)
     {
         return first;
     }
@@ -68,10 +80,21 @@ unsigned long findMax(unsigned long first, unsigned long second)
     return second;
 }
 
+//std::tuple<int,char> mytuple (10,'a');
+//
+//std::get<0>(mytuple) = 20;
+//
+//std::cout << "mytuple contains: ";
+//std::cout << std::get<0>(mytuple) << " and " << std::get<1>(mytuple);
+//std::cout << std::endl;
+
 // Checks if two strings are equal
 
 bool checkIfUnique(std::string first, std::string second, std::string firstLog, std::string secondLog, int lineCount)
 {
+    unsigned long size2 = std::get<0>(findMax2(first.length(), second.length()));
+    std::cout << size2
+    
     unsigned long size = findMax(first.length(), second.length());
     
     for (int i = 0; i < size; ++i)
@@ -98,7 +121,7 @@ void spotContentDifferences(std::string firstFile, std::string secondFile)
     
     int lineCount = 0;
     
-    while (std::getline(openFirstFile, firstFileLine) && std::getline(openSecondFile, secondFileLine))
+    while (std::getline(openFirstFile, firstFileLine) || std::getline(openSecondFile, secondFileLine))
     {
         ++lineCount;
         checkIfUnique(firstFileLine, secondFileLine, firstLog, secondLog, lineCount);
