@@ -1,7 +1,10 @@
-I was trying to optimize memory for this lab so I decided on not using any extra containers except for those already provided by the original code snippet.
+I was trying to optimize memory for this lab so I decided on not using any extra containers except for those already
+provided by the original code snippet.
 
-With this in mind, I decided on performing string manipulations instead. So as I read the file, I used the fact that fileName.isEqual(courseEnrolled) and attach the file name along with the student information. 
+With this in mind, I decided on performing string manipulations instead. So as I read the file, I used the fact that
+fileName.isEqual(courseEnrolled) and attach the file name along with the student information. 
 
-When it comes to finding dropouts and so forth, I just create substrings of this entire info in order to extract the student’s full name for processing.
+When it comes to finding dropouts and so forth, I just create substrings of this entire info in order to extract
+the student’s full name for processing.
 
 Granted this method has room for improving and probably not the best way to go about it but hey :)
