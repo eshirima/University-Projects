@@ -2,10 +2,15 @@ Last Name Roster
 
 Lab Assignment
 
-The project is due in one week: by the midnight on the day of the next lab. Make sure to include your name in comments of the source files.
-Recode the roster(original roster for my case) example we studied in class such that the list of classes the student is enrolled in is output next to student name.
+The project is due in one week: by the midnight on the day of the next lab. 
+Make sure to include your name in comments of the source files.
+Recode the roster(i.e. originalroster.cpp) example we studied in class such that the list of classes the student
+is enrolled in is output next to student name.
 
-The printed out list may be tab-separated. You may assume that the text file structure is: one name per line; the line contains a first name followed by last name separated by white space. Each student has exactly two names: first and last. The course name is the file name without the extension. The dropouts file is always the last file in the list and its name is always dropouts.txt
+The printed out list may be tab-separated. You may assume that the text file structure is: one name per line; 
+the line contains a first name followed by last name separated by white space. 
+Each student has exactly two names: first and last. The course name is the file name without the extension. 
+The dropouts file is always the last file in the list and its name is always dropouts.txt
 
 Here is an example of a printout:
 
@@ -17,4 +22,5 @@ Mary    Price    CS1
 ...
 You may not use associative containers: only vectors and lists.
 
-Hint: after compiling the mater list of enrolled students, use find() function of list container to check if the student name is present in each roster.
+Hint: after compiling the mater list of enrolled students, use find() function of list container to check if
+the student name is present in each roster.
