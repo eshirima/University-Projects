@@ -25,7 +25,7 @@ using std::transform; using std::setw;
 using std::istringstream; using std::istream_iterator;
 using std::ostream_iterator;
 
-const string dropOutFileNamingFormat = "droupouts.txt";
+const string dropOutFileNamingFormat = "droupouts";
 const string fileFormat = "csX";
 const size_t dropOutLength = dropOutFileNamingFormat.length();
 const size_t fileNameLength = fileFormat.length();
@@ -117,6 +117,7 @@ void removeDuplicates(list<string>& roster)
 void removeStudentsFromClass(list<string>& allStudents, list<string>dropOuts)
 {
     for (auto& dropOutStudent : dropOuts)
+        
     {
         dropOutStudent = dropOutStudent.substr(0, dropOutStudent.length() - dropOutLength);
         
@@ -128,6 +129,8 @@ void removeStudentsFromClass(list<string>& allStudents, list<string>dropOuts)
             size_t index = studentName.find(' ');
             index = studentName.find(' ', index + 1);
             studentName = studentName.substr(0, index);
+            
+            //TODO: studentName = fullName dropOutStudent = firstName Only. Fix this
             
             if (studentName == dropOutStudent)
             {
@@ -147,7 +150,7 @@ int main(int argc, char* argv[])
 {
     
     if (argc <= 1){ cout << "Usage: " << argv[0]
-        << " List of courses, Dropouts last" << endl; exit(1);}
+        << " List of Courses, Dropouts Last" << endl; exit(1);}
     
     // vector of courses of students
     vector <list<string>> courseStudents;
