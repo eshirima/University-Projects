@@ -1,0 +1,17 @@
+Last Name Roster Associative
+
+Lab Assignment
+
+The project is due in one week: by the midnight on the day of the next lab. Make sure to include your name in comments of the source files.
+Recode the previous lab assignment using associative containers. Specifically, you need to use a map keyed by the student's last name and their first name, the map value may be the list of courses the student is enrolled in. The map should be the ordered map. That is, the data structure to be used in as follows: map<string, list<string>> studentEntries;
+
+To repeat, you need to recode the roster example we studied in class such that the students are sorted according to their last names and a list of classes the student enrolled in is printed by the student's name. The list may be tab-separated. In the printouts, the student's last name should be stated first. You may assume that the text file structure is: one name per line; the line contains a first name followed by last name separated by white space. Each student has exactly two names: first and last. There may be students with the same last name. But there cannot be two sudents with exactly the same first and last name.
+
+Here is an example of a printout:
+
+All Students
+last name, first name:  courses enrolled 
+Anderson, Kathleen: CS1   CS3  CS4
+Edwards, Gerald: CS1   CS2 CS3
+Price, Mary: CS1
+...
