@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Emil Shirima</title>
+	</head>
+	<body>
+		<h1>Emil Shirima</h1>
+		<h2> Realm Class Wrapper Instructions</h2>
+		<h3>How to Use</h3>
+		<p>Just copy the <em>User.swift, ParentProject.swift</em> and <em>LineItems.swift</em> to your main project. These files contain the classes which handle all of the Realm objects.</p>
+		<ul>
+			<li><strong>Object Set Up</strong></li>
+			<p>Just use the helper function <em>createNewUser</em> as shown below</p>
+			<p style="color:#ff9900">let userObject = createNewUser(userName: String, password: String, userAdminStatus: Bool)</p>
+			<p>This method creates a User object consisting of the passed data. The information stored in this object is then compared with the information stored in Realm for existence. If it does not exist, the information is saved in Realm and returned.</p>
+			<b>Sample Usage </b>
+			<p style="color:#006621">let firstUser = createNewUser("people@yahoo.com", password: "hello", isAdmin: false)</p>
+			<p>The same principle applies when trying to create a new parent project except the following helper function is called </p>
+			
+			<p style="color:#ff9900">let parentProjectObject = createNewParentProject(projectName: String, projectOwner: String, projectSubmissionDate: NSDate, projectDescription: String)</p>
+			<b>Sample Usage</b>
+			<p style="color:#006621">let firstProject = createNewParentProject("Capstone", projectOwner: firstUser.getUserName(), projectSubmissionDate: NSDate(), projectDescription: "Rovisys Expense Tracker")</p>
+			<p style="color:#006621">let secondProject = createNewParentProject("Site Surveying", projectOwner: firstUser.getUserName(), projectSubmissionDate: NSDate(), projectDescription: "Site survey of Aragon Electronics")</p>
+
+			<li><strong>Link User to Project</strong></li>
+			<p>As each project is created, they are automatically stored in a single private container called <em>allUserProjects</em> which acts as a bridge between the user and the parent project. With all the projects created, you can link them by calling <em style="color:#ff9900">linkUserToParentProject(currentUser: User)</em> which takes user as its parameter.</p>
+			<b>Sample Usage</b>
+			<p style="color:#006621">linkUserToParentProject(firstUser)</p>
+			<p>When this method is invoked, the username is extracted using the <em style="color:#ff9900">getUserName()</em> method and queried inside the parent project under the label <em>submittedBy</em>. If there does exist projects which have the current user's username, objects are returned consisting of the respective projects. These projects are then appended to the <em>allUserProjects</em> container.</p>
+			<p><em>Remember that allUserProjects is our only interface between a user and parent project. With this container we can easily query between either sides using the stored attributes.</em></p>
+			
+			<li><strong>Print Methods</strong></li>
+			<p>Thanks to Swift's print function taking <em>AnyObject</em> we can directly</p>
+			<p style="color:#006621">print(firstUser)</p>
+			<p>This displays the user details in JSON format.</p>
+			
+			<p>The method <em>searchForUserRelatedProjects()</em> if invoked on the user object and returns a list of all the projects linked to the current user. To print out the information to the console, we wrap it inside the default Swift print function.</p>
+			<b>Sample Usage</b>
+			<p style="color:#006621">print(firstUser.searchForUserRelatedProjects())</p>
+			
+			<p><em>printAllUsers()</em> prints out all the users we have.</p>
+			<b>Sample Usage</b>
+			<p style="color:#006621">print(firstUser.printAllUsers())</p>
+		</ul>
+		
+		<p>This is a simple guide but feel free to fiddle around to explore more functionalities.</p>
+	</body>
+</html>
