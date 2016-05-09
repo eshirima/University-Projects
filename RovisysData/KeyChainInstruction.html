@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Emil Shirima</title>
+	</head>
+	<body>
+		<h1>Emil Shirima</h1>
+		<h2> Keychain Class Wrapper Instructions</h2>
+		<h3>How to Use</h3>
+		<ul>
+			<li><strong>Perform a pod install first</strong></li>
+			<li><strong>Realm Deletion</strong></li>
+			<p>Uncomment the line <em style="color:#ff9900">User().deleteEverythingFromRealm()</em> inside the <em style="color:#ff9900">didFinishLaunchingWithOptions()</em>. This can be found inside the <em style="color:#006621"> AppDelegate.swift</em> file</p>
+			<li><strong>Launch the app</strong></li>
+			<p>Upon a successful launch, you should see prompts on the console of realm objects</p>
+			<li><strong>Stop the app</strong></li>
+			<p>Comment out the method in step II</p>
+			
+			<li><strong>Add Users to Realm</strong></li>
+			<p>Navigate to the <em style="color:#006621">ViewController.swift</em> file. Locate <em style="color:#ff9900">oldLoginStuff()</em> and comment out everything else except for the user creation portions. Then uncomment the function call inside the <em style="color:#ff9900">viewDidLoad()</em></p>
+			
+			<li><strong>Repeat step III then quit simulator</strong></li>
+			
+			<li><strong>Add Projects to Realm</strong></li>
+			<p>Go back to <em style="color:#ff9900">oldLoginStuff()</em> and comment out the user creation portions and uncomment everything else. Run the app then quit simulator upon a successful app launch. Then comment out the <em style="color:#ff9900">oldLoginStuff()</em> inside the <em style="color:#ff9900">viewDidLoad()</em></p>
+			
+			<li><strong>Voila, everything is encrypted!</strong></li>
+			
+		</ul>
+	</body>
+</html>
